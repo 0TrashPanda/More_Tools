@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0":"moretools:item/jonah_ingot"
+        "layer0":"moretools:items/jonah_ingot"
     }
 }

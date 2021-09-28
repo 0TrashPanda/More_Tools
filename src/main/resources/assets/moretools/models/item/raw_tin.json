@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0":"moretools:item/raw_tin_ore"
+        "layer0":"moretools:items/raw_tin_ore"
     }
 }

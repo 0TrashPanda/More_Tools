@@ -14,10 +14,19 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block TIN_ORE = new TinOre(FabricBlockSettings.of(Material.STONE).strength(0.8f).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
+    public static final Block TIN_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(1.2f).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
+    public static final Block RAW_TIN_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(0.7f).breakByTool(FabricToolTags.PICKAXES, 1).requiresTool());
+
+
 
     public static void registeritems() {
             Registry.register(Registry.BLOCK, new Identifier("moretools", "tin_ore"),TIN_ORE);
             Registry.register(Registry.ITEM, new Identifier("moretools", "tin_ore"), new BlockItem(TIN_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-    }
+            Registry.register(Registry.BLOCK, new Identifier("moretools", "tin_block"),TIN_BLOCK);
+            Registry.register(Registry.ITEM, new Identifier("moretools", "tin_block"), new BlockItem(TIN_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));    
+            Registry.register(Registry.BLOCK, new Identifier("moretools", "raw_tin_block"),RAW_TIN_BLOCK);
+            Registry.register(Registry.ITEM, new Identifier("moretools", "raw_tin_block"), new BlockItem(RAW_TIN_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));    
+        
+        }
 
 }

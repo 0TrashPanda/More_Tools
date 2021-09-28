@@ -2,5 +2,7 @@
     "item.moretools.tin_ingot": "Tin Ingot",
     "item.moretools.jonah_ingot": "Jonah Ingot",
     "block.moretools.tin_ore": "Tin Ore",
-    "item.moretools.raw_tin": "Raw Tin"
+    "item.moretools.raw_tin": "Raw Tin",
+    "block.moretools.tin_block": "Tin Block",
+    "block.moretools.raw_tin_block": "Raw Tin Block"
 }

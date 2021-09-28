@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "moretools:raw_tin_block"
+        }
+    ],
+    "result": {
+        "item": "moretools:raw_tin",
+        "count": 9
+    },
+    "group": "raw_tin"
+}

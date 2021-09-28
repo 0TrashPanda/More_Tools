@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:block/cube_all",
     "textures": {
-        "all": "moretools:blocks/tin_ore"
+        "all": "moretools:blocks/tin_block"
     }
 }

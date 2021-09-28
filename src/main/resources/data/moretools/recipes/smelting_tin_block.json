@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "moretools:raw_tin_block"
+    },
+    "result": "moretools:tin_block",
+    "experience": 0.1,
+    "cookingtime": 1600
+}
