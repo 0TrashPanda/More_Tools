@@ -14,7 +14,7 @@ public class MoreTools implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registeritems();
 		ModBlocks.registeritems();
-		worldGen.brood();
+		worldGen.generate();
 
 	}
 }

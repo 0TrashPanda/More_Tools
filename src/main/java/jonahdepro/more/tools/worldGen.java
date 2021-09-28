@@ -24,15 +24,15 @@ public class worldGen {
       9)) // Vein size
     .range(new RangeDecoratorConfig(
       // You can also use one of the other height providers if you don't want a uniform distribution
-      UniformHeightProvider.create(YOffset.aboveBottom(0), YOffset.fixed(64)))) // Inclusive min and max height
+      UniformHeightProvider.create(YOffset.aboveBottom(43), YOffset.fixed(84)))) // Inclusive min and max height
     .spreadHorizontally()
-    .repeat(20); // Number of veins per chunk
+    .repeat(15); // Number of veins per chunk
  
-  // @Override
-  public static void brood() {
+
+  public static void generate() {
     RegistryKey<ConfiguredFeature<?, ?>> tinoreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
       new Identifier("moretools", "tin_ore_overworld"));
     Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, tinoreOverworld.getValue(), TIN_ORE_OVERWORLD);
-    BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, tinoreOverworld);
+    BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, tinoreOverworld); //fucking depricated error
   }
 }

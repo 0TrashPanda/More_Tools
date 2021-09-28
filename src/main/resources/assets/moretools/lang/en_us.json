@@ -4,5 +4,6 @@
     "block.moretools.tin_ore": "Tin Ore",
     "item.moretools.raw_tin": "Raw Tin",
     "block.moretools.tin_block": "Tin Block",
-    "block.moretools.raw_tin_block": "Raw Tin Block"
+    "block.moretools.raw_tin_block": "Raw Tin Block",
+    "item.moretools.tin_pickaxe": "Tin Pickaxe"
 }
