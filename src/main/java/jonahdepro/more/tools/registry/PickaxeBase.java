@@ -1,4 +1,4 @@
-package jonahdepro.more.tools;
+package jonahdepro.more.tools.registry;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

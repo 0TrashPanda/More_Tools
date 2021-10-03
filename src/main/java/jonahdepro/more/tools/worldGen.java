@@ -2,7 +2,6 @@ package jonahdepro.more.tools;
 
 import net.minecraft.world.gen.GenerationStep;
 import jonahdepro.more.tools.registry.ModBlocks;
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.util.Identifier;
@@ -16,6 +15,7 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
+@SuppressWarnings("deprecation")
 public class worldGen {
   private static ConfiguredFeature<?, ?> TIN_ORE_OVERWORLD = Feature.ORE
     .configure(new OreFeatureConfig(
@@ -27,6 +27,16 @@ public class worldGen {
       UniformHeightProvider.create(YOffset.aboveBottom(43), YOffset.fixed(84)))) // Inclusive min and max height
     .spreadHorizontally()
     .repeat(15); // Number of veins per chunk
+
+  private static ConfiguredFeature<?, ?> MYTHRIL_ORE_OVERWORLD = Feature.ORE
+  .configure(new OreFeatureConfig(
+    OreFeatureConfig.Rules.BASE_STONE_OVERWORLD,
+    ModBlocks.MYTHRIL_ORE.getDefaultState(),
+    3)) // Vein size
+  .range(new RangeDecoratorConfig(
+    // You can also use one of the other height providers if you don't want a uniform distribution
+    UniformHeightProvider.create(YOffset.aboveBottom(12), YOffset.fixed(20)))) // Inclusive min and max height
+  .repeat(40); // Number of veins per chunk
  
 
   public static void generate() {
@@ -34,5 +44,11 @@ public class worldGen {
       new Identifier("moretools", "tin_ore_overworld"));
     Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, tinoreOverworld.getValue(), TIN_ORE_OVERWORLD);
     BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, tinoreOverworld); //fucking depricated error
+  
+    RegistryKey<ConfiguredFeature<?, ?>> mythrilOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+    new Identifier("moretools", "mythril_ore_overworld"));
+    Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, mythrilOverworld.getValue(), MYTHRIL_ORE_OVERWORLD);
+    BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, mythrilOverworld); //fucking depricated error
+
   }
 }

@@ -1,4 +1,4 @@
-package jonahdepro.more.tools.registry;
+package jonahdepro.more.tools.registry.Blocks;
 
 import java.util.Random;
 import net.minecraft.block.Block;
@@ -10,9 +10,9 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 
-public class TinOre extends Block{
+public class MythrilOre extends Block{
 
-    public TinOre(Settings settings) {
+    public MythrilOre(Settings settings) {
         super(settings);
         //TODO Auto-generated constructor stub
     }
