@@ -14,7 +14,6 @@ public class TinOre extends Block{
 
     public TinOre(Settings settings) {
         super(settings);
-        //TODO Auto-generated constructor stub
     }
     protected int getExperienceWhenMined(Random random){
         return MathHelper.nextInt(random,1 ,3);
